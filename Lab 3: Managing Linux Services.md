@@ -1,6 +1,6 @@
 # Lab 3: Managing Linux Services
 
-**Date:** 15/07/2026  
+**Date:** 11/07/2026  
 **Duration:** 1.5 hours  
 **Status:** Complete  
 
