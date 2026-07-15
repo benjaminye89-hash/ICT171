@@ -1,6 +1,6 @@
 # Lab 4: Linux Permissions and Group Access Control
 
-**Date:** 15/07/2026  
+**Date:** 12/07/2026  
 **Duration:** 1.5 hours  
 **Status:** Complete  
 
