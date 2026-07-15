@@ -29,7 +29,7 @@ I downloaded Ubuntu 24.04 LTS from the official Ubuntu website.
 - Clicked "New" in VirtualBox
 - Named it "Ubuntu 24.04"
 - Allocated **4GB RAM**
-- Allocated **20GB disk space**
+- Allocated **25GB disk space**
 - Mounted the Ubuntu ISO as a virtual CD/DVD
 
 ### 4. Installed Ubuntu
@@ -42,7 +42,10 @@ I started the VM and followed the guided installer:
 ### 5. Updated the System
 After installation, I opened the terminal and ran:
 ```bash
-sudo apt update && sudo apt upgrade -y<img width="598" height="427" alt="Screenshot 2026-07-15 212536" src="https://github.com/user-attachments/assets/f7b19bb9-5b23-4599-b9ac-8eaec48bf7fb" />
+sudo apt update && sudo apt upgrade -y
+
+<img width="598" height="427" alt="Screenshot 2026-07-15 212536" src="https://github.com/user-attachments/assets/f7b19bb9-5b23-4599-b9ac-8eaec48bf7fb" />
 
 
-<img width="598" height="427" alt="Screenshot 2026-07-15 212536" src="https://github.com/user-attachments/assets/25122986-8e85-4d18-958c-ec5e50cd4521" />
+
+
