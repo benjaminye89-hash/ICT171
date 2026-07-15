@@ -340,3 +340,97 @@ sudo tail -f /var/log/syslog | grep CRON
 # Check script logs
 cat /var/log/auto_update.log
 cat /var/log/system_health.log
+
+⚠️ Errors Faced
+Error 1: Script Permissions Denied
+Error Message: ./script.sh: Permission denied
+
+Why it happened: The script did not have execute permissions.
+
+How I fixed it: Added execute permission:
+
+bash
+chmod +x script.sh
+What I learned: Always run chmod +x on new scripts.
+
+Error 2: Cron Not Executing Script
+Error Message: (Cron job didn't run)
+
+Why it happened: The script used relative paths, and cron uses absolute paths.
+
+How I fixed it: Used full paths in cron:
+
+bash
+0 2 * * * /home/benji/scripts/auto_update.sh
+What I learned: Always use absolute paths in cron jobs.
+
+Error 3: Variables Not Expanding in Cron
+Error Message: (Script ran but variables were empty)
+
+Why it happened: Cron does not load the user's environment variables.
+
+How I fixed it: Added full paths to commands:
+
+bash
+0 2 * * * /usr/bin/bash /home/benji/scripts/backup_restore.sh backup
+What I learned: Use full paths (/usr/bin/bash) in cron jobs.
+
+Error 4: Email Alerts Not Sending
+Error Message: mail: command not found
+
+Why it happened: mail package was not installed.
+
+How I fixed it: Installed mailutils:
+
+bash
+sudo apt install mailutils -y
+What I learned: Email alerts require a mail package to be installed.
+
+Error 5: Script Failed Due to Missing Directory
+Error Message: tar: /backup: No such file or directory
+
+Why it happened: The backup directory did not exist.
+
+How I fixed it: Added directory creation in the script:
+
+bash
+mkdir -p /backup/$DATE
+What I learned: Always check for directories before writing to them.
+
+🧠 Reflection
+What I Learned
+Automation is essential for efficient system administration.
+
+Bash scripts can handle complex tasks like updates, backups, and monitoring.
+
+Cron is the standard tool for scheduling scripts in Linux.
+
+Logging is critical for troubleshooting and tracking script execution.
+
+Case statements make scripts user-friendly with multiple options.
+
+Scripts should handle errors gracefully (e.g., check if directories exist).
+
+Key Commands Summary
+Command	Purpose
+chmod +x script.sh	Make script executable
+./script.sh	Run script
+crontab -e	Edit cron jobs
+crontab -l	List cron jobs
+systemctl start/stop/restart SERVICE	Manage services
+systemctl is-active SERVICE	Check if service is running
+mail -s "Subject" user@example.com	Send email alert
+tail -f /var/log/syslog	View system log in real-time
+tee -a file.log	Display and append to log file
+Real-World Application
+DevOps engineers use similar scripts to automate CI/CD pipelines.
+
+System administrators rely on cron jobs for maintenance and monitoring.
+
+Backup scripts are critical for disaster recovery.
+
+Monitoring scripts help detect issues before users are affected.
+
+Automation is a key skill for progressing from junior to senior IT roles.
+
+
