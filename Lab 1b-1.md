@@ -1,4 +1,4 @@
-Apache WebServer installed
+## Apache WebServer installed
 <img width="1422" height="968" alt="Screenshot From 2026-07-19 22-55-21" src="https://github.com/user-attachments/assets/0a0be3a2-4971-4a56-ab5e-f85444666981" />
 
 Nmap installed
