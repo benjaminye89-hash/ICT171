@@ -1,7 +1,7 @@
 ## Apache WebServer installed
 <img width="1422" height="968" alt="Screenshot From 2026-07-19 22-55-21" src="https://github.com/user-attachments/assets/0a0be3a2-4971-4a56-ab5e-f85444666981" />
 
-Nmap installed
+## Nmap installed
 <img width="952" height="398" alt="image" src="https://github.com/user-attachments/assets/cf7594fa-e5dd-4686-a904-bfa6063d5c5a" />
 
 Nmap scan before Apache is removed
